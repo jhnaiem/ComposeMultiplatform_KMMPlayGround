@@ -32,6 +32,7 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                api("io.github.qdsfdhvh:image-loader:1.2.8")
             }
         }
         val commonTest by getting {
@@ -72,4 +73,5 @@ android {
 }
 dependencies {
     implementation("androidx.navigation:navigation-common-ktx:2.5.2")
+    implementation("com.android.volley:volley:1.2.1")
 }
