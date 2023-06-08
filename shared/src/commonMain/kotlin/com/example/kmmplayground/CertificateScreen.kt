@@ -21,13 +21,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.seiko.imageloader.rememberAsyncImagePainter
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
 /**
@@ -35,18 +35,18 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
  */
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun CertificateScreen(navigationState: MutableState<ScreensState>) {
+fun CertificateScreen(navigationState: MutableState<ScreensState>, value: ImageBitmap?) {
 
     Box {
 
-        val painter =
-            rememberAsyncImagePainter("https://i.postimg.cc/nzrg8GGQ/Blue-Navy-and-Green-Modern-Seminar-Certificate-Landscape.png")
-        Image(
-            painter,
-            null,
-            modifier = Modifier.fillMaxSize().background(Color.LightGray),
-            contentScale = ContentScale.FillBounds,
-        )
+        value?.let {
+            Image(
+                it,
+                null,
+                modifier = Modifier.fillMaxSize().background(Color.LightGray),
+                contentScale = ContentScale.FillBounds,
+            )
+        }
 
         Column(
             modifier = Modifier.padding(top = 16.dp)
