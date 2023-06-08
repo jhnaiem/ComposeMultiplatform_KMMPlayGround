@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.traveapp_kmp.style.TravelAppColors.Cultured
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
 /**
@@ -63,42 +64,43 @@ fun CertificateScreen(navigationState: MutableState<ScreensState>, value: ImageB
             )
 
             Column(
-                modifier = Modifier.fillMaxHeight().padding(horizontal = 10.dp),
+                modifier = Modifier.fillMaxHeight().padding(horizontal = 30.dp)
+                    .padding(top = 110.dp),
                 verticalArrangement = Arrangement.Top,
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.Start
             ) {
                 Text(
-                    text = "Certificate".uppercase(), style = MaterialTheme.typography.h5.copy(
-                        fontWeight = FontWeight.Medium, color = Color.Blue
+                    text = "Certificate".uppercase(), style = MaterialTheme.typography.h4.copy(
+                        fontWeight = FontWeight.Normal, color = Cultured, fontSize = 40.sp
                     )
                 )
                 Text(
-                    text = "Of participation",
-                    fontSize = 18.sp,
+                    text = "Of participation".uppercase(),
+                    fontSize = 16.sp,
                     fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Normal
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Proudly Presented To",
-                    fontSize = 18.sp,
+                    text = "Proudly Presented To".uppercase(),
+                    fontSize = 16.sp,
                     fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Normal
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Jahid Hasan",
-                    fontSize = 24.sp,
-                    fontFamily = FontFamily.Serif,
+                    fontSize = 30.sp,
+                    fontFamily = FontFamily.Cursive,
                     fontStyle = FontStyle.Italic,
-                    fontWeight = FontWeight.Bold
+                    color = Cultured
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = """
-                We give this certificate as a sign that you have attended the .... organized on August 21, 2023. Hopefully, the knowledge from this seminar can be useful.
+                We give this certificate as a sign that you have attended the .... organized on June 13, 2023. Hopefully, the knowledge from this seminar can be useful.
             """.trimIndent(),
-                    fontSize = 16.sp,
+                    fontSize = 14.sp,
                     fontFamily = FontFamily.Serif
                 )
 

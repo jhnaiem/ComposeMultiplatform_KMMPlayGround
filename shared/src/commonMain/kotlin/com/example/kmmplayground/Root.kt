@@ -17,7 +17,7 @@ fun CommonView() {
     val image = remember { mutableStateOf<ImageBitmap?>(null) }
 
     LaunchedEffect(Unit) {
-        image.value = resource("Certificate.png").readBytes().toImageBitmap()
+        image.value = resource("certificate@3x.png").readBytes().toImageBitmap()
     }
     when (val state = screenNavigationState.value.screen) {
         is Screen.CertificateScreen -> CertificateScreen(
