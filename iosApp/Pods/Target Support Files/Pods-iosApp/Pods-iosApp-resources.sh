@@ -99,10 +99,14 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/Certificate.png"
   install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/certificate@3x.png"
+  install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/formback@3x.png"
+  install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/kotConf@3x.png"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/Certificate.png"
   install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/certificate@3x.png"
+  install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/formback@3x.png"
+  install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/kotConf@3x.png"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

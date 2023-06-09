@@ -40,6 +40,7 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
                 api("io.github.qdsfdhvh:image-loader:1.2.8")
             }
         }

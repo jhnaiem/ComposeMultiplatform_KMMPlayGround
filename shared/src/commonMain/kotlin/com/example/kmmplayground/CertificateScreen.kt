@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.kmmplayground.data.Participant
 import com.example.traveapp_kmp.style.TravelAppColors.Cultured
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
@@ -36,7 +37,11 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
  */
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun CertificateScreen(navigationState: MutableState<ScreensState>, value: ImageBitmap?) {
+fun CertificateScreen(
+    navigationState: MutableState<ScreensState>,
+    value: ImageBitmap?,
+    participant: Participant
+) {
 
     Box {
 
@@ -89,7 +94,7 @@ fun CertificateScreen(navigationState: MutableState<ScreensState>, value: ImageB
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Jahid Hasan",
+                    text = participant.name,
                     fontSize = 30.sp,
                     fontFamily = FontFamily.Cursive,
                     fontStyle = FontStyle.Italic,
