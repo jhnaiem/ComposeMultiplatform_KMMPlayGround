@@ -12,7 +12,7 @@ fun MainViewController() = ComposeUIViewController {
         // To skip upper part of screen.
         Box(
             modifier = Modifier
-                .height(40.dp)
+                .height(10.dp)
         )
         CommonView()
     }

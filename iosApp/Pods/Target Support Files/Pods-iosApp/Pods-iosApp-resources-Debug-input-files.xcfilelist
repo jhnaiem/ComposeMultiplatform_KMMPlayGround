@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources.sh
+${PODS_ROOT}/../../shared/src/commonMain/resources/Certificate.png
+${PODS_ROOT}/../../shared/src/commonMain/resources/certificate@3x.png
+${PODS_ROOT}/../../shared/src/commonMain/resources/formback@3x.png
+${PODS_ROOT}/../../shared/src/commonMain/resources/kotConf@3x.png

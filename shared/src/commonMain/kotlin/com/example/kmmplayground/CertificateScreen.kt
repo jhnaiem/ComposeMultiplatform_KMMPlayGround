@@ -21,13 +21,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.seiko.imageloader.rememberAsyncImagePainter
+import com.example.kmmplayground.data.Participant
+import com.example.traveapp_kmp.style.TravelAppColors.Cultured
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
 /**
@@ -35,18 +37,22 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
  */
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun CertificateScreen(navigationState: MutableState<ScreensState>) {
+fun CertificateScreen(
+    navigationState: MutableState<ScreensState>,
+    value: ImageBitmap?,
+    participant: Participant
+) {
 
     Box {
 
-        val painter =
-            rememberAsyncImagePainter("https://i.postimg.cc/nzrg8GGQ/Blue-Navy-and-Green-Modern-Seminar-Certificate-Landscape.png")
-        Image(
-            painter,
-            null,
-            modifier = Modifier.fillMaxSize().background(Color.LightGray),
-            contentScale = ContentScale.FillBounds,
-        )
+        value?.let {
+            Image(
+                it,
+                null,
+                modifier = Modifier.fillMaxSize().background(Color.LightGray),
+                contentScale = ContentScale.FillBounds,
+            )
+        }
 
         Column(
             modifier = Modifier.padding(top = 16.dp)
@@ -63,42 +69,43 @@ fun CertificateScreen(navigationState: MutableState<ScreensState>) {
             )
 
             Column(
-                modifier = Modifier.fillMaxHeight().padding(horizontal = 10.dp),
+                modifier = Modifier.fillMaxHeight().padding(horizontal = 30.dp)
+                    .padding(top = 110.dp),
                 verticalArrangement = Arrangement.Top,
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.Start
             ) {
                 Text(
-                    text = "Certificate".uppercase(), style = MaterialTheme.typography.h5.copy(
-                        fontWeight = FontWeight.Medium, color = Color.Blue
+                    text = "Certificate".uppercase(), style = MaterialTheme.typography.h4.copy(
+                        fontWeight = FontWeight.Normal, color = Cultured, fontSize = 40.sp
                     )
                 )
                 Text(
-                    text = "Of participation",
-                    fontSize = 18.sp,
+                    text = "Of participation".uppercase(),
+                    fontSize = 16.sp,
                     fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Normal
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Proudly Presented To",
-                    fontSize = 18.sp,
+                    text = "Proudly Presented To".uppercase(),
+                    fontSize = 16.sp,
                     fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Normal
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Jahid Hasan",
-                    fontSize = 24.sp,
-                    fontFamily = FontFamily.Serif,
+                    text = participant.name,
+                    fontSize = 30.sp,
+                    fontFamily = FontFamily.Cursive,
                     fontStyle = FontStyle.Italic,
-                    fontWeight = FontWeight.Bold
+                    color = Cultured
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = """
-                We give this certificate as a sign that you have attended the .... organized on August 21, 2023. Hopefully, the knowledge from this seminar can be useful.
+                We give this certificate as a sign that you have attended the .... organized on June 13, 2023. Hopefully, the knowledge from this seminar can be useful.
             """.trimIndent(),
-                    fontSize = 16.sp,
+                    fontSize = 14.sp,
                     fontFamily = FontFamily.Serif
                 )
 
