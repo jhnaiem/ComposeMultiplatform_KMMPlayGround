@@ -1,22 +1,20 @@
-# ComposeMultiplatform_KMMPlayGround
-This is a multiplatform app built using Kotlin Compose that runs on Android and iOS. The app has two screens: a registration screen and a certificate screen. Users can register with  name, email and id on the registration screen and then navigate to the certificate screen.
+# Compose Multiplatform Playground
+This is a [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/) mobile application running on Android and iOS platform. The app has two screens: a registration screen and a certificate screen. Users can register with  name, email and ID on the registration screen and then navigate to the certificate screen.
 
 ## Requirements
 To build and run the app, you will need:
-- Android Studio 4.2 or later
-- Xcode 12 or later
-- Kotlin Multiplatform Mobile plugin for Android Studio
-- Compose Multiplatform IDE Support for Android Studio
-- Compose Multiplatform for iOS (alpha)
+- [Android Studio](https://developer.android.com/studio) 4.2 or later
+- [Xcode 12](https://apps.apple.com/us/app/xcode/id497799835) or later
+- [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio
 ## Getting Started
 - Clone the repository
 - Open the project in Android Studio
 - Build the project
 ## Project Structure
-*The project consists of three main modules:*
-- androidApp: This module contains the code for the Android app.
-- iosApp: This module contains the code for the iOS app.
-- common: This module contains the shared code that is used by both the Android and iOS apps.
+The project consists of three main modules:
+- `androidApp`: contains the code for the Android app.
+- `iosApp`: contains the code for the iOS app.
+- `common`: contains the shared code that is used by both the Android and iOS apps.
 ## Running the App
 To run the app on Android:
 - Connect an Android device to your computer or start an emulator.
@@ -30,5 +28,5 @@ To run the app on iOS:
 <img src="https://github.com/jhnaiem/ComposeMultiplatform_KMMPlayGround/assets/33525108/94e1d1f4-8950-48be-91ed-b2eb36dd11d4" width=25% height=25%>
 <img src="https://github.com/jhnaiem/ComposeMultiplatform_KMMPlayGround/assets/33525108/796b0d08-a477-438f-9d56-373a7c7b9e9f" width=25% height=25%>
 
-### Acknowledgements
-This app was built using the Compose Multiplatform template provided by [JetBrains](https://github.com/JetBrains/compose-multiplatform-ios-android-template). We also used the Kotlin Multiplatform Mobile [documentation](https://kotlinlang.org/docs/multiplatform-mobile-create-first-app.html)to guide us in developing this app.
+## Acknowledgements
+This app is built using the (Compose Multiplatform template)[(https://github.com/JetBrains/compose-multiplatform-ios-android-template)] provided by JetBrains. We've also used the Kotlin Multiplatform Mobile [documentation](https://kotlinlang.org/docs/multiplatform-mobile-create-first-app.html) to guide us in developing this app.
