@@ -4,7 +4,7 @@ This is a [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplat
 ## Requirements
 To build and run the app, you will need:
 - [Android Studio](https://developer.android.com/studio) 4.2 or later
-- [Xcode 12](https://apps.apple.com/us/app/xcode/id497799835) or later
+- [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 12 or later
 - [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio
 ## Getting Started
 - Clone the repository
@@ -29,4 +29,4 @@ To run the app on iOS:
 <img src="https://github.com/jhnaiem/ComposeMultiplatform_KMMPlayGround/assets/33525108/796b0d08-a477-438f-9d56-373a7c7b9e9f" width=25% height=25%>
 
 ## Acknowledgements
-This app is built using the (Compose Multiplatform template)[(https://github.com/JetBrains/compose-multiplatform-ios-android-template)] provided by JetBrains. We've also used the Kotlin Multiplatform Mobile [documentation](https://kotlinlang.org/docs/multiplatform-mobile-create-first-app.html) to guide us in developing this app.
+This app is built using the [Compose Multiplatform template](https://github.com/JetBrains/compose-multiplatform-ios-android-template) provided by JetBrains. We've also used the Kotlin Multiplatform Mobile [documentation](https://kotlinlang.org/docs/multiplatform-mobile-create-first-app.html) to guide us in developing this app.
